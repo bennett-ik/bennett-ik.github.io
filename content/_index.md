@@ -51,12 +51,8 @@ sections:
     content:
       title: Contact
       email: ig0326@unist.ac.kr
-      address:
-        street: ''
-        city: Ulsan
-        country: South Korea
-        country_code: KR
-      contact_links: []
+      city: Ulsan
+      country: South Korea
     design:
       columns: '1'
 ---

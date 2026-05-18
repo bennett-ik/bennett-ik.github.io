@@ -29,53 +29,33 @@ education:
   - area: M.S./Ph.D. in Energy and Chemical Engineering
     institution: UNIST (Ulsan National Institute of Science and Technology)
     date_start: '2024-03-01'
-    date_end: ''
-    summary: |
-      Graduate researcher in the JW Energy Lab. Research focused on electrochemical catalysis, furfural oxidation, and solar-driven water splitting.
+    summary: Graduate researcher in the JW Energy Lab.
 
 work:
   - position: Graduate Researcher
     company_name: JW Energy Lab, UNIST
     company_url: ''
-    company_logo: ''
     date_start: '2024-03-01'
-    date_end: ''
     summary: |
-      - Electrochemical furfural oxidation under alkaline conditions
-      - Design and synthesis of single-atom and perovskite catalysts
-      - Perovskite solar cell-based PEC/PVEC systems
+      Electrochemical furfural oxidation, single-atom and perovskite catalyst design, perovskite solar cell-based PEC/PVEC systems.
 
 skills:
   - name: Experimental
     items:
       - name: Electrochemistry
-        description: ''
         percent: 85
-        icon: beaker
       - name: Catalyst Synthesis
-        description: ''
         percent: 80
-        icon: wrench-screwdriver
-      - name: XRD / XPS / SEM / TEM
-        description: ''
+      - name: Characterization (XRD/XPS/SEM/TEM)
         percent: 75
-        icon: magnifying-glass
       - name: Solar Cell Fabrication
-        description: ''
         percent: 70
-        icon: sun
   - name: Computational
-    color: '#4f9cf9'
-    color_border: '#3b82f6'
     items:
       - name: Python
-        description: ''
         percent: 65
-        icon: code-bracket
       - name: DFT
-        description: ''
         percent: 60
-        icon: cpu-chip
 
 languages:
   - name: Korean
@@ -88,4 +68,4 @@ languages:
 
 I am a graduate researcher in the Department of Energy and Chemical Engineering at **UNIST** (Ulsan National Institute of Science and Technology), working in the **JW Energy Lab**.
 
-My research focuses on the rational design of heterogeneous catalysts for electrochemical energy conversion, with particular interest in biomass valorization (electrochemical furfural oxidation) and solar-driven water splitting (perovskite-based PEC/PVEC systems).
+My research focuses on the rational design of heterogeneous catalysts for electrochemical energy conversion, with particular interest in biomass valorization and solar-driven water splitting.
