@@ -46,13 +46,18 @@ sections:
     design:
       view: citation
 
-  - block: contact
+  - block: markdown
     id: contact
     content:
       title: Contact
-      email: ig0326@unist.ac.kr
-      city: Ulsan
-      country: South Korea
+      text: |-
+        **Ikjae Lee (이익재)**
+
+        JW Energy Lab  
+        Department of Energy and Chemical Engineering  
+        UNIST, Ulsan, South Korea
+
+        📧 [ig0326@unist.ac.kr](mailto:ig0326@unist.ac.kr)
     design:
       columns: '1'
 ---
