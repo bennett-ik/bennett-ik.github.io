@@ -54,19 +54,110 @@
         }
 
         .avatar {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
+            width: 179px;
+            height: 179px;
             overflow: hidden;
             margin-bottom: 20px;
         }
 
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .bi-icon {
+            position: relative;
+            width: 248px;
+            height: 248px;
+            border-radius: 52px;
+            overflow: hidden;
+            transform: scale(0.72);
+            transform-origin: top left;
         }
+
+        .bi-ring {
+            position: absolute; inset: -40px;
+            background: conic-gradient(
+                from 0deg,
+                #010a1a 0deg, #034694 60deg, #0066cc 110deg,
+                #00aaff 160deg, #00d4ff 200deg, #0066cc 250deg,
+                #034694 300deg, #010a1a 360deg
+            );
+            animation: bi-spin 5s linear infinite;
+        }
+        @keyframes bi-spin { to { transform: rotate(360deg); } }
+
+        .bi-ring-mask {
+            position: absolute; inset: 6px;
+            border-radius: 46px;
+            background: #080810;
+        }
+
+        .bi-canvas {
+            position: absolute; inset: 9px;
+            border-radius: 43px;
+            overflow: hidden;
+            background: radial-gradient(ellipse at 38% 28%, #0c2260 0%, #021030 55%, #010818 100%);
+        }
+
+        .bi-stripe {
+            position: absolute; top: 0; left: 50%; width: 2px; height: 100%;
+            background: linear-gradient(to bottom, transparent, #034694 25%, #034694 75%, transparent);
+            opacity: 0.25; transform: translateX(-50%);
+        }
+        .bi-top-arc {
+            position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+            width: 160px; height: 100px;
+            border: 1px solid rgba(0,180,255,0.15); border-radius: 50%; pointer-events: none;
+        }
+        .bi-top-arc::after {
+            content: ''; position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+            width: 110px; height: 70px;
+            border: 1px solid rgba(0,140,255,0.1); border-radius: 50%;
+        }
+        .bi-dot-grid {
+            position: absolute; top: 8%; left: 50%; transform: translateX(-50%);
+            display: grid; grid-template-columns: repeat(7,1fr); gap: 7px; opacity: 0.22;
+        }
+        .bi-dot-grid span { width: 2px; height: 2px; border-radius: 50%; background: #00c8ff; display: block; }
+        .bi-initials {
+            position: absolute; top: 42%; left: 50%; transform: translate(-50%,-50%);
+            font-size: 72px; font-weight: 900; letter-spacing: -5px; line-height: 1;
+            background: linear-gradient(150deg,#ffffff 0%,#b8d8ff 35%,#00d4ff 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            filter: drop-shadow(0 0 20px rgba(0,180,255,0.55));
+            font-family: 'Helvetica Neue','Arial Black',sans-serif; white-space: nowrap;
+        }
+        .bi-name-en {
+            position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%);
+            font-size: 9.5px; font-weight: 300; letter-spacing: 4px;
+            text-transform: uppercase; color: rgba(160,210,255,0.38); white-space: nowrap;
+        }
+        .bi-divider {
+            position: absolute; bottom: 28%; left: 12%; right: 12%; height: 1px;
+            background: linear-gradient(to right, transparent, rgba(0,180,255,0.5) 20%, rgba(0,212,255,0.7) 50%, rgba(0,180,255,0.5) 80%, transparent);
+        }
+        .bi-chem {
+            position: absolute; bottom: 14%; left: 50%; transform: translateX(-50%);
+            font-size: 7.5px; color: rgba(0,200,255,0.35);
+            white-space: nowrap; letter-spacing: 1px; font-family: 'Courier New',monospace;
+        }
+        .bi-bubble {
+            position: absolute; border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(0,220,255,0.85), rgba(0,100,200,0.25));
+            border: 1px solid rgba(0,210,255,0.45);
+            animation: bi-rise linear infinite; pointer-events: none;
+        }
+        @keyframes bi-rise {
+            0%   { transform: translateY(0) translateX(0); opacity: 0; }
+            8%   { opacity: 0.9; } 88% { opacity: 0.5; }
+            100% { transform: translateY(-240px) translateX(var(--d)); opacity: 0; }
+        }
+        .bi-b1  { width: 5px; height: 5px; bottom: 22%; left: 18%; --d: 7px;  animation-duration: 3.3s; animation-delay: 0.0s; }
+        .bi-b2  { width: 3px; height: 3px; bottom: 26%; left: 36%; --d: -4px; animation-duration: 2.7s; animation-delay: 0.7s; }
+        .bi-b3  { width: 8px; height: 8px; bottom: 24%; left: 55%; --d: 11px; animation-duration: 4.2s; animation-delay: 1.2s; }
+        .bi-b4  { width: 4px; height: 4px; bottom: 20%; left: 72%; --d: -7px; animation-duration: 3.6s; animation-delay: 0.4s; }
+        .bi-b5  { width: 6px; height: 6px; bottom: 28%; left: 28%; --d: 5px;  animation-duration: 3.9s; animation-delay: 1.8s; }
+        .bi-b6  { width: 3px; height: 3px; bottom: 22%; left: 48%; --d: -3px; animation-duration: 2.6s; animation-delay: 1.0s; }
+        .bi-b7  { width: 7px; height: 7px; bottom: 20%; left: 14%; --d: 9px;  animation-duration: 4.5s; animation-delay: 2.3s; }
+        .bi-b8  { width: 4px; height: 4px; bottom: 26%; left: 80%; --d: -5px; animation-duration: 3.1s; animation-delay: 1.5s; }
+        .bi-b9  { width: 5px; height: 5px; bottom: 20%; left: 64%; --d: 6px;  animation-duration: 3.7s; animation-delay: 0.2s; }
+        .bi-b10 { width: 4px; height: 4px; bottom: 24%; left: 42%; --d: -8px; animation-duration: 3.0s; animation-delay: 2.0s; }
 
         .profile-name {
             font-size: 1.1rem;
@@ -480,7 +571,30 @@
     <!-- ── Sidebar ── -->
     <aside class="sidebar">
         <div>
-            <div class="avatar"><img src="icon-512.png" alt="Bennett icon"></div>
+            <div class="avatar">
+                <div class="bi-icon">
+                    <div class="bi-ring"></div>
+                    <div class="bi-ring-mask"></div>
+                    <div class="bi-canvas">
+                        <div class="bi-stripe"></div>
+                        <div class="bi-top-arc"></div>
+                        <div class="bi-dot-grid">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="bi-bubble bi-b1"></div><div class="bi-bubble bi-b2"></div>
+                        <div class="bi-bubble bi-b3"></div><div class="bi-bubble bi-b4"></div>
+                        <div class="bi-bubble bi-b5"></div><div class="bi-bubble bi-b6"></div>
+                        <div class="bi-bubble bi-b7"></div><div class="bi-bubble bi-b8"></div>
+                        <div class="bi-bubble bi-b9"></div><div class="bi-bubble bi-b10"></div>
+                        <div class="bi-initials">IJ</div>
+                        <div class="bi-name-en">bennett</div>
+                        <div class="bi-divider"></div>
+                        <div class="bi-chem">2H₂O → 2H₂ + O₂</div>
+                    </div>
+                </div>
+            </div>
             <div class="profile-name">Ikjae Lee</div>
             <div class="profile-name-ko">이익재</div>
             <div class="profile-meta">
